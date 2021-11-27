@@ -27,6 +27,7 @@ gamestate="*res://gamestate.gd"
 
 [debug]
 
+settings/fps/force_fps=60
 gdscript/warnings/return_value_discarded=false
 
 [display]
@@ -39,6 +40,10 @@ window/stretch/aspect="expand"
 [gdnative]
 
 singletons=[  ]
+
+[global]
+
+fps=false
 
 [image_loader]
 
