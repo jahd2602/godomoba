@@ -13,3 +13,21 @@ Pull requests are welcome!
 ## Screenshots
 
 ![Screenshot](screenshots/early.png)
+
+### Task List
+
+* Add pathfinding to the movement of the players (go around trees)
+* Add static creeps
+* Add melee attack mechanics to creeps
+* Add ranged attack mechanics to creeps
+* Add PVP (attack other players)
+* Add health to creeps
+* Add health to playes
+* Add skills
+* Add mana
+* Add skills that require mana
+* Add experience through last hit
+* Add levelling up
+* Add towers
+* Build 3v3 world
+* Build lobby
