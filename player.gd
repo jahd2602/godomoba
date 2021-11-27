@@ -4,6 +4,7 @@ const MOTION_SPEED = 90.0
 
 puppet var puppet_pos = Vector2()
 puppet var puppet_motion = Vector2()
+puppet var puppet_world_target_pos = Vector2()
 
 var current_anim = ""
 
@@ -43,10 +44,11 @@ func _physics_process(_delta):
 		current_anim = new_anim
 		get_node("anim").play(current_anim)
 
-	# FIXME: Use move_and_slide
 	move_and_slide(motion * MOTION_SPEED)
 	if not is_network_master():
 		puppet_pos = position # To avoid jitter
+		
+	$target.global_position = puppet_world_target_pos
 
 
 func set_player_name(new_name):
@@ -55,3 +57,14 @@ func set_player_name(new_name):
 
 func _ready():
 	puppet_pos = position
+	
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == BUTTON_RIGHT and event.pressed:
+			set_world_target_pos(event.global_position)
+	
+func set_world_target_pos(pos: Vector2) -> void:
+	rset("puppet_world_target_pos", pos)
+	
+	
+	

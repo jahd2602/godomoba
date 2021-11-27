@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
 [ext_resource path="res://charwalk.png" type="Texture" id=2]
 [ext_resource path="res://montserrat.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://target.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 20.0
@@ -166,3 +167,7 @@ size_flags_vertical = 0
 custom_fonts/font = SubResource( 8 )
 text = "Player 1"
 align = 1
+
+[node name="target" type="Sprite" parent="."]
+position = Vector2( -2473.47, -1518.91 )
+texture = ExtResource( 4 )
