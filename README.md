@@ -1,15 +1,15 @@
-# Multiplayer Bomber
+# Godomoba - MOBA built in Godot Game Engine
 
-A multiplayer implementation of the classical bomberman game.
-One of the players should press "host", while the other
-should type in his address and press "play".
+Open-source project to develop a Multiplayer Online Battle Arena (MOBA) game for the web (desktop and mobile), built on Godot Game Engine 3.4.
+
+Similar to games such as LOL, Dota 2, HOS, Smite, Vainglory, Arena of Valor, HON. But it is going to be in 2D for simplicity.
 
 Language: GDScript
 
-Renderer: GLES 3
+Check out this demo on the asset library: Link Pending
 
-Check out this demo on the asset library: https://godotengine.org/asset-library/asset/139
+Pull requests are welcome!
 
 ## Screenshots
 
-![Screenshot](screenshots/bomber.png)
+![Screenshot](screenshots/early.png)
