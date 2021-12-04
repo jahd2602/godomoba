@@ -17,6 +17,8 @@ var player_name = "The Warrior"
 var players = {}
 var players_ready = []
 
+var nav_2d : Navigation2D = null
+
 # Signals to let lobby GUI know what's going on.
 signal player_list_changed()
 signal connection_failed()
@@ -77,6 +79,7 @@ remote func pre_start_game(spawn_points):
 	# Muder cena para world.tscn
 	var world = load("res://world.tscn").instance()
 	get_tree().get_root().add_child(world)
+	nav_2d = world.get_node("Navigation2D")
 
 	# Esconder a sala de espera
 	get_tree().get_root().get_node("Lobby").hide()

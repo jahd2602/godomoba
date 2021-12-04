@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="0" type="Position2D"]
+position = Vector2( 144, 504 )
+
+[node name="player" parent="." instance_placeholder="res://player.tscn"]

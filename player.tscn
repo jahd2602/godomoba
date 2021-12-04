@@ -236,3 +236,6 @@ align = 1
 position = Vector2( -2492.24, -1490.85 )
 texture = ExtResource( 4 )
 offset = Vector2( 18.7664, -28.064 )
+
+[node name="debug_nav_line" type="Line2D" parent="."]
+default_color = Color( 1, 0, 0, 1 )

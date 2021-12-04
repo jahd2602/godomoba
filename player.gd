@@ -7,6 +7,7 @@ puppet var puppet_motion = Vector2()
 
 var current_anim = ""
 
+# The position of the flag, where the player will move to
 var world_target_pos = Vector2()
 
 
@@ -65,20 +66,18 @@ func set_player_name(new_name):
 
 func _ready():
 	puppet_pos = position
+	$debug_nav_line.set_as_toplevel(true)
 	
 func _unhandled_input(event: InputEvent) -> void:
-	if is_network_master():
+	if is_network_master(): # For current user player, not the puppets
 		if event is InputEventMouseButton:
 			if event.button_index == BUTTON_RIGHT and event.pressed:
 				set_world_target_pos(event.global_position)
 	
 func set_world_target_pos(world_pos: Vector2) -> void:
 	world_target_pos = world_pos
-	print(name)
-	if is_network_master():
-		print("master set_world_target_pos")
-	else:
-		print("puppet set_world_target_pos")
+	var new_path = gamestate.nav_2d.get_simple_path(global_position, world_target_pos)
+	$debug_nav_line.points = new_path
 	
 	
 	
