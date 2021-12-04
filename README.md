@@ -17,6 +17,7 @@ Pull requests are welcome!
 ### Task List
 
 * Add pathfinding to the movement of the players (go around trees)
+* Remove the flag after the player arrives to it
 * Add static creeps
 * Add melee attack mechanics to creeps
 * Add ranged attack mechanics to creeps
